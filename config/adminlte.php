@@ -300,7 +300,14 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
+        [
+            'text'        => 'Cache',
 
+            'route'       => 'cache.clear',
+            'icon'        => 'fas fa-broom',
+            'topnav'      => true,
+            'id'          => 'cacheCleaner',
+        ],
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
@@ -353,6 +360,11 @@ return [
             'text'        => 'Импорт документов',
             'route'       => 'import.document.show',
             'icon'        => 'fas fa-file-import nav-icon'
+        ],
+        [
+            'text'        => 'Вопросы с сайта',
+            'route'       => 'questions.list',
+            'icon'        => 'fas fa-question-circle nav-icon'
         ],
         ['header' => 'После удалить'],
         [

@@ -29,7 +29,7 @@
 					<a href="/catalog/product/jotul-f-3-cb-bp" class="showcase_item-btn">Смотреть товар</a>
 			</div>
 		</div>
-		<div class="showcase_item-img" style="background-image: url(../images/src/products/main/block1.jpg)"></div>
+		<div class="showcase_item-img" style="background-image: url(../images/src/main/block1.jpg)"></div>
 	</article>
 
 	<article class="showcase_item">
@@ -40,7 +40,7 @@
 						<a href="/catalog/product/jotul-terrazza" class="showcase_item-btn">Смотреть товар</a>
 				</div>
 			</div>
-			<div class="showcase_item-img" style="background-image: url(../images/src/products/main/block6.jpg)"></div>
+			<div class="showcase_item-img" style="background-image: url(../images/src/main/block6.jpg)"></div>
 		</article>
 		<article class="showcase_item">
 				<div class="showcase_item-info">
@@ -51,7 +51,7 @@
 							<a href="/catalog/product/jotul-i-520-frl" class="showcase_item-btn">Смотреть товар</a>
 					</div>
 				</div>
-				<div class="showcase_item-img" style="background-image: url(../images/src/products/main/block2.jpg)"></div>
+				<div class="showcase_item-img" style="background-image: url(../images/src/main/block2.jpg)"></div>
 		</article>
 		<article class="showcase_item">
 				<div class="showcase_item-info">
@@ -62,7 +62,7 @@
 							<a href="/catalog/product/jotul-f-363-bp-advance" class="showcase_item-btn">Смотреть товар</a>
 					</div>
 				</div>
-				<div class="showcase_item-img" style="background-image: url(../images/src/products/main/block5.jpg)"></div>
+				<div class="showcase_item-img" style="background-image: url(../images/src/main/block5.jpg)"></div>
 		</article>
 </section>
 
@@ -74,11 +74,6 @@
 		</a>
 	</div>
 </div>
-
-
-
-
-
 
 <div class="paralax" style="background-image: url(../images/src/section-bg.jpg);">
 	<div class="paralax-wrap">

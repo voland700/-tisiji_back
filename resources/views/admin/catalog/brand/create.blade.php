@@ -66,5 +66,5 @@
 @stop
 
 @section('js')
-
+    <script src="/assets/admin/js/app.js"></script>
 @stop

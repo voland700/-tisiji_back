@@ -33,7 +33,7 @@
         @foreach($categories as $category)
             <tr>
                 <td>{{$category->id}}</td>
-                <td>{{$category->name}}</td>
+                <td><a href="{{route('product.list', $category->id)}}">{{$category->name}}</a></td>
                 <td class="text-center">{{$category->sort}}</td>
                 <td class="{{ $category->active === 1 ? 'green-icon' : 'pale-icon'}}"><i class="far fa-check-circle"></i></td>
                 <td>
@@ -60,9 +60,9 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/assets/admin/css/admin_custom.css">     
+    <link rel="stylesheet" href="/assets/admin/css/admin_custom.css">
 @stop
 
 @section('js')
-     
+    <script src="/assets/admin/js/app.js"></script>
 @stop

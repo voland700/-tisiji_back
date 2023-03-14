@@ -317,6 +317,7 @@
 @stop
 
 @section('js')
+<script src="/assets/admin/js/app.js"></script>
 <script>
     let count = 1;
     let namber = 100;
@@ -331,9 +332,6 @@
         e.preventDefault();
         document.getElementById('videoBlock').insertAdjacentHTML('beforeend', '<div class="col-12"><input type="text" class="form-control mb-2"  name="video[]" value=""></div>');
     });
-
-
-
 
     document.getElementById('addProperties').addEventListener('click', function (e){
         e.preventDefault();
@@ -367,10 +365,6 @@
         return await response.text(); // parses JSON response into native JavaScript objects
     }
 
-
-
-
-
    function imgDelete(){
         let btnDelete = document.querySelectorAll('.img-del');
 
@@ -402,20 +396,5 @@
    }
 
    if(document.querySelectorAll('.img-del')) imgDelete();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
 @stop

@@ -253,6 +253,7 @@
 @stop
 
 @section('js')
+<script src="/assets/admin/js/app.js"></script>
 <script>
     let count = 1;
     let namber = 100;

@@ -137,8 +137,8 @@
 @stop
 
 @section('js')
+<script src="/assets/admin/js/app.js"></script>
 <script>
-
    async function getCоntеnt(url = '', data = {}) {
         // Default options are marked with *
         const response = await fetch(url, {

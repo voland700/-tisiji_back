@@ -1,7 +1,7 @@
 <tr>
 
     <td>{{$childCategory->id}}</td>
-    <td>{!! $delimiter ?? '–&nbsp;'!!} {{$childCategory->name}}</td>
+    <td>{!! $delimiter ?? '–&nbsp;'!!}<a href="{{route('product.list', $childCategory->id)}}">{{$childCategory->name}}</a></td>
     <td class="text-center">{{$childCategory->sort}}</td>
     <td class="{{ $childCategory->active === 1 ? 'green-icon' : 'pale-icon'}}"><i class="far fa-check-circle"></i></td>
     <td>

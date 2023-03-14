@@ -1,24 +1,29 @@
-<div class="modal_wrap" id="modal" style="display:none;max-width:450px;">
-	<form action="{{route('front.question.make')}}" method="POST" class="modal_form" id="modalForm">
-        @csrf
-        @method('POST')
-		<div class="modal_fild">
-			<label>Ваше имя<span class="req">*</span></label>
-			<input type="text" class="inp_name" name="name" id="inpName" value="" placeholder="Your name">
-			<span id="askNameValid" class="fild_massege"></span>
-		</div>
-		<div class="modal_fild">
-			<label>E-mail адрес<span class="req">*</span></label>
-			<input type="email" class="inp_name" name="email" id="inpMail" value="" placeholder="E-mail">
-			<span id="askMailValid" class="fild_massege"></span>
-		</div>
-		<div class="modal_fild">
-			<label>Вопрос</label>
-			<textarea name="message" rows="5" id="message"></textarea>
-		</div>
-		<input type="submit" name="submit" value="Отправить" class="modal_btn" id="modalBtn">
-	</form>
-</div>
+
+
+<template id="tmplModal">
+    <div class="modal_wrap" style="display:none;max-width:450px;">
+        <form action="{{route('front.question.make')}}" method="POST" class="modal_form" id="modalForm">
+            @csrf
+            @method('POST')
+            <div class="modal_fild">
+                <label>Ваше имя<span class="req">*</span></label>
+                <input type="text" class="inp_name" name="name" id="inpName" value="" placeholder="Your name">
+                <span id="askNameValid" class="fild_massege"></span>
+            </div>
+            <div class="modal_fild">
+                <label>E-mail адрес<span class="req">*</span></label>
+                <input type="email" class="inp_name" name="email" id="inpMail" value="" placeholder="E-mail">
+                <span id="askMailValid" class="fild_massege"></span>
+            </div>
+            <div class="modal_fild">
+                <label>Вопрос</label>
+                <textarea name="message" rows="5" id="message"></textarea>
+            </div>
+            <input type="submit" name="submit" value="Отправить" class="modal_btn" id="modalBtn">
+        </form>
+    </div>
+</template>
+
 <footer>
 	<div class="container">
 		<div class="foot-wrap">

@@ -144,6 +144,7 @@
 
 
 @section('js')
+<script src="/assets/admin/js/app.js"></script>
 <script>
 if(document.getElementById('imagesBlock')){
 	let allBtmDelete = document.querySelectorAll('.img-del');

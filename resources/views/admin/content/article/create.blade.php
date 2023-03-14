@@ -98,20 +98,5 @@
 @stop
 
 @section('js')
-<script>
-
-/*
-    document.getElementById('addProperties').addEventListener('click', function (e){
-        e.preventDefault();
-        let tmpl = tmplProperty.content.cloneNode(true);
-        tmpl.querySelector('.name').setAttribute('name', 'properties['+namber+'][name]');
-        tmpl.querySelector('.value').setAttribute('name', 'properties['+namber+'][value]');
-        namber++;
-        document.getElementById('propertiesList').append(tmpl);
-    })
-
-
-*/
-
-</script>
+<script src="/assets/admin/js/app.js"></script>
 @stop

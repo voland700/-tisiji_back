@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\Admin\Catalog\CategoryController;
 use App\Http\Controllers\Admin\Catalog\BrandController;
 use App\Http\Controllers\Admin\Catalog\DocumentController;
@@ -63,21 +64,11 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/clear', function() {
-    Artisan::call('cache:clear');
-    Artisan::call('config:cache');
-    Artisan::call('view:clear');
-    Artisan::call('route:clear');
-    return "Кэш очищен.";
-})->name('clear.cash');
-
-
-Route::get('/admin', function () {
-    return view('admin.main');
-});
-
-
 Route::group(['prefix' => 'admin'], function () {
+
+    Route::get('/', [MainController::class, 'index'])->name('admin.main');
+    Route::get('/cache-clear', [MainController::class, 'cacheClear'])->name('cache.clear');
+
     Route::resource('category', CategoryController::class);
     Route::get('/category-img-delete/{id}', [CategoryController::class, 'imgDelete'])->name('category.img.delete');
     Route::get('/category-background-delete/{id}', [CategoryController::class, 'bacgroundDelete'])->name('category.background.delete');
@@ -87,9 +78,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('document', DocumentController::class);
     Route::get('/document-file-delete/{id}', [DocumentController::class, 'fileDelete'])->name('document.file.delete');
     Route::resource('property', PropertyController::class);
-
-
-
 
     Route::get('/product-list/{id?}', [ProductController::class, 'list'])->name('product.list');
     Route::get('/product-create/{id?}', [ProductController::class, 'create'])->name('product.create');
@@ -109,6 +97,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/import-background-show', [ImportController::class, 'showBackgroundUploadForm'])->name('import.background.show');
     Route::post('/import-background-uploud',[ImportController::class, 'backgroundUploadData'])->name('import.background.uploud');
 
+    Route::get('/questions-list', [QuestionController::class, 'index'])->name('questions.list');
+    Route::get('/question-show/{id}', [QuestionController::class, 'show'])->name('question.show');
+    Route::get('/question-destroy/{id}', [QuestionController::class, 'destroy'])->name('question.destroy');
  });
 
 Route::get('/test', [CategoryController::class, 'test']);
